@@ -10,7 +10,7 @@
   (let ((odin-check-dir (locate-dominating-file default-directory ".odin-check"))
         (check-path buffer-file-name))
     (if (not odin-check-dir)
-        ;; No .odin-check file. Run the equivalent of odin check '.'
+        ;; No .odin-check file. Run odin check buffer-file-name
         (expand-file-name check-path)
       ;; There is a .odin-check file
       ;; Set the check-path to the dir of the .odin-check file
