@@ -8,7 +8,7 @@
 
 (defun flycheck-odin-check-path ()
   (let ((odin-check-dir (locate-dominating-file default-directory ".odin-check"))
-        (check-path "."))
+        (check-path buffer-file-name))
     (if (not odin-check-dir)
         ;; No .odin-check file. Run the equivalent of odin check '.'
         (expand-file-name check-path)
@@ -86,7 +86,7 @@ the format that odin check spits out"
   "Flycheck checker using odin check -vet"
   :command ("odin"
             "check"
-            (eval (buffer-file-name))
+            (eval (flycheck-odin-check-path))
             "-vet")
   :error-patterns
   ((error line-start (file-name) "(" line ":" column ") " (message) line-end))
