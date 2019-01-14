@@ -15,7 +15,7 @@
 
 #### Default behavior
 This is a wrapper around `odin check <location> -vet`. With no changes on the users' part, the default
-behavior is is to run `odin check . -vet` (where '.' is the current buffer directory).
+behavior is is to run `odin check file_name.odin -vet` (where 'file_name.odin' is the current buffer file).
 
 
 #### Change project checker root
