@@ -7,12 +7,6 @@
   '(add-hook 'flycheck-mode-hook #'flycheck-odin-setup))
 ```
 
-## Contents
-* [Default behavior](#default-behavior)
-* [Change project checker root](#change-project-checker-root)
-* [Filter errors](#filter-errors)
-* [Examples](#examples)
-
 #### Default behavior
 This is a wrapper around `odin check $LOCATION -vet`. With no changes on the users' part, the default
 behavior is is to run `odin check $CURRENT_DIRECTORY -vet` (where '$CURRENT_DIRECTORY' is the directory of the current buffer).
