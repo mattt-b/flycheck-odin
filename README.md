@@ -20,10 +20,12 @@ behavior is is to run `odin check $CURRENT_DIRECTORY -vet` (where '$CURRENT_DIRE
 
 #### Changing behavior
 This exposes the following variables that can be customized globally or with [dir-locals.el](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
-* `flycheck-odin-project-path`
-  Change the $LOCATION in `odin check $LOCATION -vet`. This can be a directory or a file.
-* `flycheck-odin-error-filters`
-  A list of Emacs regexes of errors to ignore.
+
+*flycheck-odin-project-path*  
+Change the $LOCATION in `odin check $LOCATION -vet`. This can be a directory or a file.
+
+*flycheck-odin-error-filters*  
+A list of Emacs regexes of errors to ignore.
 
 An example configuration might look something like this:
 ```
