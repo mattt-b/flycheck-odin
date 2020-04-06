@@ -13,7 +13,7 @@ behavior is is to run `odin check $CURRENT_DIRECTORY -vet` (where '$CURRENT_DIRE
 
 
 #### Changing behavior
-This exposes the following variables that can be customized globally or with [dir-locals.el](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
+This exposes the following variables that can be customized globally or with [.dir-locals.el](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
 
 *flycheck-odin-project-path*  
 Change the $LOCATION in `odin check $LOCATION -vet`. This can be a directory or a file.
@@ -24,7 +24,7 @@ A list of Emacs regexes of errors to ignore.
 An example configuration might look something like this:
 ```
 ((odin-mode
-  (flycheck-odin-project-root . "~/code/project/src")
+  (flycheck-odin-project-path . "~/code/project/src")
   (flycheck-odin-error-filters . ("^[^[:blank:]]*/Odin/core/"
                                   "^[^[:blank:]]*/Odin/shared/some_library/"
                                   "foobar"))))
