@@ -20,6 +20,11 @@ Will usually be a directory, but can be a single file."
   :type '(repeat string)
   :group 'flycheck-odin)
 
+(defcustom flycheck-odin-command-arguments '("-vet")
+  "Arguments passed to the odin compiler to check the code in the project"
+  :type '(repeat string)
+  :group 'flycheck-odin)
+
 (defun flycheck-odin-check-path ()
   (or flycheck-odin-project-path default-directory))
 
@@ -51,7 +56,7 @@ the format that odin check spits out"
   :command ("odin"
             "check"
             (eval (flycheck-odin-check-path))
-            "-vet")
+            (eval flycheck-odin-command-arguments))
   :error-patterns
   ((error line-start (file-name) "(" line ":" column ") " (message) line-end))
   :error-filter flycheck-odin-error-filter
