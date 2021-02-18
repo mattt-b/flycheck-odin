@@ -21,6 +21,9 @@ Change the $LOCATION in `odin check $LOCATION -vet`. This can be a directory or 
 *flycheck-odin-error-filters*  
 A list of Emacs regexes of errors to ignore.
 
+*flycheck-odin-command-arguments*  
+A list of [compiler flags](https://github.com/odin-lang/Odin/wiki/Compiler-Flags). Defaults to `("-vet")`
+
 An example configuration might look something like this:
 ```
 ((odin-mode
